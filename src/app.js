@@ -12,8 +12,11 @@ const userRouter = require('./routes/users');
 const cors = require('cors');
 
 const corsOptions = {
-  origin: 'http://13.53.143.156:3000',
-  credentials: true, // some legacy browsers (IE11, various SmartTVs) choke on 204
+  origin: 'http://13.53.143.156', // or include port :80 if needed
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  optionsSuccessStatus: 200, // some legacy browsers choke on 204
 };
 
 const app = express();
