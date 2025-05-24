@@ -12,7 +12,7 @@ const userRouter = require('./routes/users');
 const cors = require('cors');
 
 const corsOptions = {
-  origin: 'http://localhost:5173',
+  origin: 'http://13.53.143.156:80',
   credentials: true, // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
